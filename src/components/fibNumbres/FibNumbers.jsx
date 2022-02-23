@@ -13,8 +13,10 @@ const FibNumbers = ({ x, y, n }) => {
     console.log("calc");
     let numbs = fibNumbres;
     let i = 1;
-    while (i < n) {
-      numbs.push(getNext(i, numbs));
+    while (i <= n) {
+      console.log(i);
+      console.log(getNext(i));
+      numbs.push(getNext(i));
       i++;
     }
 
@@ -22,8 +24,6 @@ const FibNumbers = ({ x, y, n }) => {
   };
 
   const getNext = (i) => {
-    console.log(fibNumbres[i]);
-    console.log(fibNumbres[i - 1]);
     return fibNumbres[i] + fibNumbres[i - 1];
   };
 
